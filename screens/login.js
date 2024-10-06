@@ -18,7 +18,7 @@ export default function Login(){
               <TextInput style={styles.textInput} value={props.values.username} onChangeText={props.handleChange('username')} />
               <Text>Contraseña: </Text>
               <TextInput style={styles.textInput} value={props.values.password} onChangeText={props.handleChange('password')} />
-              <Button title="log in" onPress={props.handleSubmit} />
+              <Button title="Iniciar sesion" onPress={props.handleSubmit} />
               <Text style={styles.h4}>¿Olvidaste tu contraseña? <Pressable><Text style={styles.link}>Haz click aqui</Text></Pressable></Text>
             </View>
           )}
