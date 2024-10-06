@@ -1,4 +1,4 @@
-import { View, TextInput, Text, StyleSheet, Button } from "react-native"
+import { View, TextInput, Text, StyleSheet, Button, Pressable } from "react-native"
 import { Formik } from "formik"
 
 export default function Login(){
@@ -19,6 +19,7 @@ export default function Login(){
               <Text>Contraseña: </Text>
               <TextInput style={styles.textInput} value={props.values.password} onChangeText={props.handleChange('password')} />
               <Button title="log in" onPress={props.handleSubmit} />
+              <Text style={styles.h4}>¿Olvidaste tu contraseña? <Pressable><Text style={styles.link}>Haz click aqui</Text></Pressable></Text>
             </View>
           )}
         </Formik>
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     justifyContent:'center'
   }, 
   contentContainer: {
-    width: 800,
+    width: 600,
     height: 500,
     alignItems: 'center'
   },
@@ -42,6 +43,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     fontWeight: '700'
+  },
+  h4: {
+    fontSize: 10
   },
   formContainer: {
     marginTop: 50,
@@ -56,6 +60,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
     paddingVertical: 5,
-    paddingHorizontal: 5
+    paddingHorizontal: 5,
+    color: "#444",
+  },
+  link: {
+    color: 'blue'
   }
 })
