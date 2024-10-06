@@ -1,7 +1,7 @@
 import { View, Text, Pressable, StyleSheet } from "react-native"
 import { AntDesign } from "@expo/vector-icons"
 
-export default function HomeHeader(){
+export default function Header(){
   return (
     <View style={styles.container}>
       <View style={styles.usernameContainer}>
@@ -10,6 +10,7 @@ export default function HomeHeader(){
       </View>
       <View style={styles.linksContainer}>
         {/*TODO: Create the routes*/}
+        <Pressable onPress={()=>navigation.navigate('login')}><Text style={styles.linkText}>Inicio</Text></Pressable>
         <Pressable onPress={()=>navigation.navigate('login')}><Text style={styles.linkText}>Usuarios</Text></Pressable>
         <Pressable onPress={()=>navigation.navigate('login')}><Text style={styles.linkText}>Prestamos</Text></Pressable>
         <Pressable onPress={()=>navigation.navigate('login')}><Text style={styles.linkText}>Agregar</Text></Pressable>

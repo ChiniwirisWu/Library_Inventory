@@ -5,13 +5,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaView } from 'react-native';
 import Login from './screens/login';
 import Home from './screens/home';
+import NewItemForm from './screens/NewItemForm';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='login'>
+      <Stack.Navigator initialRouteName='newItemForm'>
         <Stack.Screen
           name='login'
           component={Login}
@@ -20,6 +21,11 @@ export default function App() {
         <Stack.Screen
           name='home'
           component={Home}
+          options={{headerShown:false}}
+        />
+        <Stack.Screen
+          name='newItemForm'
+          component={NewItemForm}
           options={{headerShown:false}}
         />
       </Stack.Navigator>
